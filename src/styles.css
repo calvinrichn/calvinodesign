@@ -8,11 +8,11 @@
   --color-bg: #080808;
   --color-surface: #111111;
   --color-surface2: #171717;
-  --color-primary: #F2F0EB;
-  --color-muted: #5A5A5A;
+  --color-ink: #F2F0EB;
+  --color-dim: #5A5A5A;
   --color-accent: #C5FF40;
-  --color-border: #1E1E1E;
-  --color-border2: #2A2A2A;
+  --color-line: #1E1E1E;
+  --color-line2: #2A2A2A;
   --font-display: "Syne", sans-serif;
   --font-body: "DM Sans", sans-serif;
   --font-mono: "DM Mono", monospace;
