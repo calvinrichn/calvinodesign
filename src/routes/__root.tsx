@@ -81,10 +81,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Designer Gráfico freelance em Maputo, Moçambique. Identidade visual, branding, materiais publicitários e design com IA generativa." },
       { name: "author", content: "Calvino Cossa" },
       { name: "theme-color", content: "#080808" },
-      { property: "og:title", content: "Calvino Cossa — Designer Gráfico" },
-      { property: "og:description", content: "Portfolio de design gráfico, branding e materiais visuais. Baseado em Maputo, Moçambique." },
+      { property: "og:title", content: "Calvino Cossa — Designer Gráfico | Maputo, Moçambique" },
+      { property: "og:description", content: "Designer Gráfico freelance em Maputo, Moçambique. Identidade visual, branding, materiais publicitários e design com IA generativa." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Calvino Cossa — Designer Gráfico | Maputo, Moçambique" },
+      { name: "twitter:description", content: "Designer Gráfico freelance em Maputo, Moçambique. Identidade visual, branding, materiais publicitários e design com IA generativa." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7f259bb4-4374-497d-a3cf-5c95ea3261df/id-preview-111eec9c--1af4ccf5-32e6-4b5b-851c-3bd89f658f59.lovable.app-1783028334027.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7f259bb4-4374-497d-a3cf-5c95ea3261df/id-preview-111eec9c--1af4ccf5-32e6-4b5b-851c-3bd89f658f59.lovable.app-1783028334027.png" },
     ],
     links: [
       {
