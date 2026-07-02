@@ -31,21 +31,18 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
 
 export function Stats() {
   return (
-    <section className="border-y border-line bg-surface">
-      <div className="mx-auto grid max-w-[1280px] grid-cols-2 gap-y-10 px-[clamp(24px,5vw,80px)] py-14 md:grid-cols-4">
-        {items.map((s) => (
-          <div key={s.label} className="text-center">
-            <div
-              className="font-display font-extrabold text-accent"
-              style={{ fontSize: "clamp(1.8rem, 3vw, 2.4rem)" }}
-            >
-              <Counter target={s.value} suffix={s.suffix} />
+    <section className="bg-bg">
+      <div className="mx-auto max-w-[1400px] px-[clamp(24px,5vw,80px)] pb-8">
+        <div className="grid grid-cols-2 gap-px overflow-hidden rounded-[24px] bg-line2/60 md:grid-cols-4">
+          {items.map((s) => (
+            <div key={s.label} className="bg-surface p-8">
+              <p className="font-mono text-[0.6rem] uppercase tracking-[0.15em] text-cream/50">[ {s.label} ]</p>
+              <div className="mt-4 font-display uppercase leading-none text-cream" style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)" }}>
+                <Counter target={s.value} suffix={s.suffix} />
+              </div>
             </div>
-            <div className="mt-2 font-mono text-[0.7rem] uppercase tracking-[0.15em] text-dim">
-              {s.label}
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
