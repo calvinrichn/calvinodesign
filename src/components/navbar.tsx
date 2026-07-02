@@ -28,12 +28,12 @@ export function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-bg/85 backdrop-blur-md border-b border-line" : ""
+        scrolled ? "bg-bg/90 backdrop-blur-md border-b border-line" : ""
       }`}
     >
       <div className="mx-auto flex max-w-[1280px] items-center justify-between px-[clamp(24px,5vw,80px)] py-5">
-        <a href="#hero" onClick={handleClick("#hero")} className="font-display text-xl font-extrabold tracking-tight text-ink">
-          CALVINO<span className="text-accent">.</span>
+        <a href="#hero" onClick={handleClick("#hero")} className="font-display text-2xl uppercase tracking-tight text-cream">
+          CALVINO<span className="text-accent">/</span>COSSA
         </a>
         <nav className="hidden items-center gap-8 md:flex">
           {links.map((l) => (
@@ -41,7 +41,7 @@ export function Navbar() {
               key={l.href}
               href={l.href}
               onClick={handleClick(l.href)}
-              className="font-body text-[0.85rem] tracking-wide text-ink/80 transition-colors hover:text-accent"
+              className="font-mono text-[0.75rem] uppercase tracking-[0.15em] text-cream/70 transition-colors hover:text-accent"
             >
               {l.label}
             </a>
@@ -49,9 +49,9 @@ export function Navbar() {
           <a
             href="#contacto"
             onClick={handleClick("#contacto")}
-            className="rounded-[4px] bg-accent px-5 py-2.5 font-display text-[0.85rem] font-bold text-bg transition-opacity hover:opacity-85"
+            className="rounded-full bg-cream px-5 py-2.5 font-mono text-[0.75rem] uppercase tracking-[0.12em] text-bg transition-opacity hover:opacity-85"
           >
-            Falar comigo
+            Contacto ↗
           </a>
         </nav>
         <button
@@ -59,9 +59,9 @@ export function Navbar() {
           aria-label="Menu"
           onClick={() => setOpen((v) => !v)}
         >
-          <span className={`block h-[2px] w-6 bg-ink transition-transform ${open ? "translate-y-[7px] rotate-45" : ""}`} />
-          <span className={`block h-[2px] w-6 bg-ink transition-opacity ${open ? "opacity-0" : ""}`} />
-          <span className={`block h-[2px] w-6 bg-ink transition-transform ${open ? "-translate-y-[7px] -rotate-45" : ""}`} />
+          <span className={`block h-[2px] w-6 bg-cream transition-transform ${open ? "translate-y-[7px] rotate-45" : ""}`} />
+          <span className={`block h-[2px] w-6 bg-cream transition-opacity ${open ? "opacity-0" : ""}`} />
+          <span className={`block h-[2px] w-6 bg-cream transition-transform ${open ? "-translate-y-[7px] -rotate-45" : ""}`} />
         </button>
       </div>
       {open && (
@@ -71,7 +71,7 @@ export function Navbar() {
               key={l.href}
               href={l.href}
               onClick={handleClick(l.href)}
-              className="font-display text-3xl font-bold text-ink"
+              className="font-display text-4xl uppercase text-cream"
             >
               {l.label}
             </a>
@@ -79,9 +79,9 @@ export function Navbar() {
           <a
             href="#contacto"
             onClick={handleClick("#contacto")}
-            className="rounded-[4px] bg-accent px-6 py-3 font-display text-lg font-bold text-bg"
+            className="rounded-full bg-cream px-6 py-3 font-mono uppercase text-sm text-bg"
           >
-            Falar comigo
+            Contacto ↗
           </a>
         </div>
       )}
