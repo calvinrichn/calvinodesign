@@ -1,44 +1,28 @@
-import { useEffect, useRef, useState } from "react";
-import { useInView } from "framer-motion";
+import { Gem, Grid3x3, Star, Target, Users } from "lucide-react";
 
-const items = [
-  { value: 2025, suffix: "", label: "Em actividade desde", raw: "2025" },
-  { value: 10, suffix: "+", label: "Projectos realizados", raw: "10+" },
-  { value: 5, suffix: "+", label: "Ferramentas de IA", raw: "5+" },
-  { value: 3, suffix: "", label: "Idiomas", raw: "3" },
+const stats = [
+  { icon: Star, value: "2025+", label: "Em atividade desde" },
+  { icon: Grid3x3, value: "50+", label: "Projetos realizados" },
+  { icon: Users, value: "30+", label: "Clientes satisfeitos" },
+  { icon: Gem, value: "10+", label: "Marcas fortalecidas" },
+  { icon: Target, value: "100%", label: "Dedicação em cada projeto" },
 ];
-
-function Counter({ target, suffix }: { target: number; suffix: string }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, amount: 0.5 });
-  const [n, setN] = useState(0);
-  useEffect(() => {
-    if (!inView) return;
-    const duration = 1200;
-    const start = performance.now();
-    let raf: number;
-    const tick = (t: number) => {
-      const p = Math.min(1, (t - start) / duration);
-      const eased = 1 - Math.pow(1 - p, 3);
-      setN(Math.round(target * eased));
-      if (p < 1) raf = requestAnimationFrame(tick);
-    };
-    raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
-  }, [inView, target]);
-  return <span ref={ref}>{n}{suffix}</span>;
-}
 
 export function Stats() {
   return (
-    <section className="bg-bg">
-      <div className="mx-auto max-w-[1400px] px-[clamp(24px,5vw,80px)] pb-8">
-        <div className="grid grid-cols-2 gap-px overflow-hidden rounded-[24px] bg-line2/60 md:grid-cols-4">
-          {items.map((s) => (
-            <div key={s.label} className="bg-surface p-8">
-              <p className="font-mono text-[0.6rem] uppercase tracking-[0.15em] text-cream/50">[ {s.label} ]</p>
-              <div className="mt-4 font-display uppercase leading-none text-cream" style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)" }}>
-                <Counter target={s.value} suffix={s.suffix} />
+    <section className="bg-bg py-[clamp(24px,4vw,48px)]">
+      <div className="mx-auto max-w-[1400px] px-[clamp(20px,4vw,56px)]">
+        <div className="grid grid-cols-2 gap-3 overflow-hidden rounded-[24px] border border-cream/8 bg-surface p-6 sm:grid-cols-3 lg:grid-cols-5 lg:gap-6 lg:p-8">
+          {stats.map((s) => (
+            <div key={s.label} className="flex items-center gap-4">
+              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-accent/40 bg-accent/10 text-accent">
+                <s.icon className="h-4 w-4" strokeWidth={1.8} />
+              </span>
+              <div className="min-w-0">
+                <div className="font-display uppercase leading-none tracking-tight text-cream" style={{ fontSize: "clamp(1.35rem, 2vw, 1.75rem)" }}>
+                  {s.value}
+                </div>
+                <p className="mt-1.5 font-body text-[0.65rem] uppercase leading-tight tracking-[0.18em] text-dim">{s.label}</p>
               </div>
             </div>
           ))}
