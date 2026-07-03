@@ -1,80 +1,103 @@
 import { Reveal } from "./reveal";
+import { ArrowRight, Asterisk, Download, Heart, Lightbulb, Star, Target } from "lucide-react";
+import aboutPortrait from "@/assets/about-portrait.jpg";
 
-const rows = [
-  ["Localização", "Maputo, Moçambique"],
-  ["Modalidade", "Freelance · Remoto"],
-  ["Email", "calvinocossa6@gmail.com"],
-  ["Disponibilidade", "Aberto a novos projectos"],
+const items = [
+  { icon: Target, title: "Foco", desc: "Design estratégico com propósito e criatividade." },
+  { icon: Star, title: "Experiência", desc: "3+ Anos criando soluções visuais que funcionam." },
+  { icon: Lightbulb, title: "Abordagem", desc: "Escuta, pesquisa e design centrado no usuário." },
+  { icon: Heart, title: "Disponibilidade", desc: "Projetos novos e colaborações são sempre bem-vindos." },
 ];
 
 export function Sobre() {
   return (
-    <section id="sobre" className="bg-surface">
-      <div className="mx-auto max-w-[1400px] px-[clamp(24px,5vw,80px)] py-[clamp(64px,10vw,120px)]">
-        <div className="flex items-baseline justify-between">
+    <section id="sobre" className="bg-bg py-[clamp(48px,8vw,96px)]">
+      <div className="mx-auto max-w-[1400px] px-[clamp(20px,4vw,56px)]">
+        <div className="relative overflow-hidden rounded-[32px] border border-cream/8 bg-surface p-[clamp(24px,4vw,56px)]">
           <Reveal>
-            <p className="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-cream/60">[ sobre ]</p>
-          </Reveal>
-          <Reveal>
-            <span className="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-cream/40">/01</span>
-          </Reveal>
-        </div>
-        <Reveal delay={0.05}>
-          <h2
-            className="mt-6 font-display uppercase leading-[0.9] tracking-[-0.01em] text-cream"
-            style={{ fontSize: "clamp(2.5rem, 6.5vw, 5.5rem)" }}
-          >
-            DIRECÇÃO CRIATIVA <span className="text-accent">PARA A NOVA</span> GERAÇÃO DE MARCAS
-          </h2>
-        </Reveal>
-
-        <div className="mt-14 grid items-start gap-8 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
-          <Reveal className="relative">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[28px] bg-accent">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="font-display uppercase text-cream/20" style={{ fontSize: "clamp(6rem, 16vw, 12rem)" }}>CC</span>
-              </div>
-              <span className="absolute left-5 top-5 rounded-full bg-cream px-3 py-1 font-mono text-[0.6rem] uppercase tracking-[0.15em] text-bg">
-                [ perfil ]
-              </span>
-              <span className="absolute bottom-5 left-5 inline-flex items-center gap-2 rounded-full bg-bg px-3 py-1.5 font-mono text-[0.62rem] uppercase tracking-[0.15em] text-cream">
-                <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-                Disponível
-              </span>
-            </div>
+            <p className="inline-flex items-center gap-2 font-body text-[0.72rem] font-medium uppercase tracking-[0.22em] text-cream/70">
+              Sobre mim <Asterisk className="h-3.5 w-3.5 text-accent" strokeWidth={2.5} />
+            </p>
           </Reveal>
 
-          <div>
-            <div className="space-y-5 font-body text-[1rem] leading-[1.65] text-cream/75">
-              <Reveal delay={0.1} as="p">
-                Sou Calvino Cossa — designer gráfico baseado em Maputo. Trabalho com marcas locais e internacionais em identidade visual, publicidade e conteúdo digital com impacto real.
+          <div className="mt-10 grid gap-10 lg:grid-cols-[1.15fr_1fr_1fr] lg:items-start">
+            {/* Left column: heading + copy + CV */}
+            <div>
+              <Reveal delay={0.05}>
+                <h2 className="font-display uppercase leading-[0.92] tracking-[-0.02em]" style={{ fontSize: "clamp(2.2rem, 4.6vw, 3.6rem)" }}>
+                  <span className="block text-cream">Eu crio</span>
+                  <span className="block text-accent">soluções digitais</span>
+                  <span className="block text-cream">que geram resultados.</span>
+                </h2>
               </Reveal>
-              <Reveal delay={0.15} as="p">
-                Combino processo autodidata e domínio técnico das ferramentas da indústria com IA generativa (Midjourney, Firefly, Leonardo) para acelerar resultados sem perder personalidade.
+              <Reveal delay={0.15}>
+                <p className="mt-6 max-w-md font-body text-[0.95rem] leading-[1.7] text-dim">
+                  Sou Calvino Cossa, Designer Gráfico &amp; UI Designer com mais de 3 anos de experiência ajudando marcas a se destacarem através de design estratégico, funcional e visualmente impactante.
+                </p>
               </Reveal>
-              <Reveal delay={0.2} as="p">
-                Detalhe, prazos e satisfação do cliente — nesta ordem.
+              <Reveal delay={0.22}>
+                <a
+                  href="#"
+                  className="mt-8 inline-flex items-center gap-4 rounded-2xl border border-cream/15 bg-bg/40 px-5 py-4 transition-colors hover:border-accent hover:bg-accent/5"
+                >
+                  <span className="grid h-11 w-11 place-items-center rounded-xl border border-cream/15 text-cream">
+                    <Download className="h-4 w-4" strokeWidth={2} />
+                  </span>
+                  <span className="text-left">
+                    <span className="block font-body text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-cream">Baixar CV</span>
+                    <span className="mt-0.5 block font-body text-[0.75rem] text-dim">Currículo Completo (PDF)</span>
+                  </span>
+                </a>
               </Reveal>
             </div>
 
-            <Reveal delay={0.25} className="mt-10">
-              <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-[20px] bg-line2/60">
-                {rows.map(([k, v]) => (
-                  <div key={k} className="bg-bg p-5">
-                    <dt className="font-mono text-[0.6rem] uppercase tracking-[0.15em] text-cream/50">[ {k} ]</dt>
-                    <dd className={`mt-2 font-display uppercase text-lg leading-tight ${k === "Disponibilidade" ? "text-accent" : "text-cream"}`}>{v}</dd>
-                  </div>
+            {/* Middle column: 4 items */}
+            <div>
+              <ul className="space-y-6">
+                {items.map((it, i) => (
+                  <Reveal key={it.title} delay={0.1 + i * 0.06} as="li">
+                    <div className="flex items-start gap-4">
+                      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-accent/60 bg-accent/10 text-accent">
+                        <it.icon className="h-4 w-4" strokeWidth={2} />
+                      </span>
+                      <div className="min-w-0">
+                        <p className="font-body text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-cream">{it.title}</p>
+                        <p className="mt-1 font-body text-[0.9rem] leading-[1.55] text-dim">{it.desc}</p>
+                      </div>
+                    </div>
+                  </Reveal>
                 ))}
-              </dl>
-            </Reveal>
+              </ul>
+              <Reveal delay={0.35}>
+                <a
+                  href="#contacto"
+                  onClick={(e) => { e.preventDefault(); document.querySelector("#contacto")?.scrollIntoView({ behavior: "smooth" }); }}
+                  className="group mt-8 inline-flex items-center gap-3 font-body text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-cream"
+                >
+                  Mais sobre mim
+                  <span className="grid h-10 w-10 place-items-center rounded-full bg-accent text-cream transition-transform group-hover:translate-x-1">
+                    <ArrowRight className="h-4 w-4" />
+                  </span>
+                </a>
+              </Reveal>
+            </div>
 
-            <Reveal delay={0.3}>
-              <a
-                href="mailto:calvinocossa6@gmail.com"
-                className="mt-8 inline-flex items-center gap-3 rounded-full bg-cream px-6 py-3 font-mono text-[0.75rem] uppercase tracking-[0.12em] text-bg transition-opacity hover:opacity-85"
-              >
-                Enviar email <span className="text-accent">↗</span>
-              </a>
+            {/* Right column: portrait */}
+            <Reveal delay={0.15} className="relative">
+              <div className="relative overflow-hidden rounded-[24px]">
+                <div
+                  aria-hidden
+                  className="absolute inset-0 -z-10"
+                  style={{
+                    background: "radial-gradient(55% 55% at 55% 45%, rgba(232,35,29,0.35) 0%, transparent 70%)",
+                    filter: "blur(24px)",
+                  }}
+                />
+                <img src={aboutPortrait} alt="Calvino Cossa" loading="lazy" width={912} height={1104} className="h-full w-full object-cover" />
+                <span className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-xl bg-accent text-cream">
+                  <Asterisk className="h-4 w-4" strokeWidth={2.5} />
+                </span>
+              </div>
             </Reveal>
           </div>
         </div>
