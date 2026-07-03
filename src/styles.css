@@ -5,18 +5,18 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-bg: #1C0507;
-  --color-surface: #240709;
-  --color-surface2: #2E0A0D;
-  --color-cream: #F1EDE4;
-  --color-ink: #F1EDE4;
-  --color-dim: #A08A85;
-  --color-accent: #E63329;
-  --color-line: #3A1013;
-  --color-line2: #4A1519;
-  --font-display: "Anton", "Archivo Black", sans-serif;
-  --font-body: "DM Sans", sans-serif;
-  --font-mono: "DM Mono", monospace;
+  --color-bg: #0A0A0A;
+  --color-surface: #111111;
+  --color-surface2: #171717;
+  --color-cream: #FFFFFF;
+  --color-ink: #FFFFFF;
+  --color-dim: #9CA3AF;
+  --color-accent: #E8231D;
+  --color-line: rgba(255,255,255,0.08);
+  --color-line2: rgba(255,255,255,0.12);
+  --font-display: "Archivo Black", "Anton", "Helvetica Neue", sans-serif;
+  --font-body: "Inter", "Space Grotesk", sans-serif;
+  --font-mono: "Space Grotesk", "Inter", monospace;
 }
 
 /*
