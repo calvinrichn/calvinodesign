@@ -19,7 +19,6 @@ function Index() {
       <Navbar />
       <main>
         <Hero />
-        <Stats />
         <Sobre />
         <Servicos />
         <Projetos />
