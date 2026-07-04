@@ -74,7 +74,7 @@ export function Hero() {
             <span className="font-body text-[0.68rem] font-semibold uppercase tracking-[0.25em] text-cream/60">Siga-me</span>
             <div className="flex items-center gap-2.5">
               {[
-                { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
+                { icon: Instagram, href: "https://instagram.com/calvinocossa", label: "Instagram" },
                 { icon: MessageCircle, href: "https://wa.me/258848519216", label: "WhatsApp" },
                 { icon: Mail, href: "mailto:calvinocossa6@gmail.com", label: "Email" },
               ].map(({ icon: Icon, href, label }) => (
