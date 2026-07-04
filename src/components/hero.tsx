@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Asterisk, Instagram, Mail, MapPin, MessageCircle } from "lucide-react";
-import heroPortrait from "@/assets/hero-portrait.jpg";
+import heroPortrait from "@/assets/calvino.png.asset.json";
 
 function scrollTo(href: string) {
   document.querySelector(href)?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -120,7 +120,7 @@ export function Hero() {
 
           <div className="relative overflow-hidden rounded-[28px]">
             <img
-              src={heroPortrait}
+              src={heroPortrait.url}
               alt="Calvino Cossa"
               width={1024}
               height={1280}
