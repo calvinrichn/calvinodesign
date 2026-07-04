@@ -3,21 +3,9 @@ import { ArrowUpRight, Asterisk, Instagram, Mail, MessageCircle } from "lucide-r
 
 const links = [
   { label: "Email", value: "calvinocossa6@gmail.com", href: "mailto:calvinocossa6@gmail.com", icon: Mail },
-  { label: "WhatsApp", value: "+258 84 123 4567", href: "https://wa.me/258841234567", icon: MessageCircle },
-  { label: "Instagram", value: "@calvinocossa.design", href: "https://instagram.com/calvinocossa.design", icon: Instagram },
-  { label: "Behance", value: "behance.net/calvinocossa", href: "https://behance.net/calvinocossa", icon: BehanceMini },
+  { label: "WhatsApp", value: "+258 84 851 9216", href: "https://wa.me/258848519216", icon: MessageCircle },
+  { label: "Instagram", value: "@calvinocossa", href: "https://instagram.com/calvinocossa", icon: Instagram },
 ];
-
-function BehanceMini({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M2 5h6a3 3 0 0 1 0 6H2z" />
-      <path d="M2 11h7a3 3 0 0 1 0 6H2z" />
-      <path d="M14 7h6" />
-      <path d="M13 14h9a4 4 0 0 0-8 0v1a3 3 0 0 0 6 0" />
-    </svg>
-  );
-}
 
 export function Contacto() {
   return (
