@@ -75,8 +75,7 @@ export function Hero() {
             <div className="flex items-center gap-2.5">
               {[
                 { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-                { icon: BehanceIcon, href: "https://behance.net", label: "Behance" },
-                { icon: MessageCircle, href: "https://wa.me/258841234567", label: "WhatsApp" },
+                { icon: MessageCircle, href: "https://wa.me/258848519216", label: "WhatsApp" },
                 { icon: Mail, href: "mailto:calvinocossa6@gmail.com", label: "Email" },
               ].map(({ icon: Icon, href, label }) => (
                 <a
@@ -141,16 +140,5 @@ export function Hero() {
         </motion.div>
       </div>
     </section>
-  );
-}
-
-function BehanceIcon({ className = "", strokeWidth = 1.8 }: { className?: string; strokeWidth?: number }) {
-  return (
-    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round">
-      <path d="M2 5h6a3 3 0 0 1 0 6H2z" />
-      <path d="M2 11h7a3 3 0 0 1 0 6H2z" />
-      <path d="M14 7h6" />
-      <path d="M13 14h9a4 4 0 0 0-8 0v1a3 3 0 0 0 6 0" />
-    </svg>
   );
 }
