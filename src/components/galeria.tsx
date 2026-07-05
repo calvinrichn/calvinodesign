@@ -1,15 +1,16 @@
 import { useMemo, useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Asterisk, Maximize2, X } from "lucide-react";
-import img1 from "@/assets/galeria/0000000045f8.png.asset.json";
-import img2 from "@/assets/galeria/0000000067cc.png.asset.json";
-import img3 from "@/assets/galeria/00000000db60.png.asset.json";
-import img4 from "@/assets/galeria/0000000041c8.png.asset.json";
-import img5 from "@/assets/galeria/00000000dff0.png.asset.json";
-import img6 from "@/assets/galeria/0000000098e4.png.asset.json";
-import img7 from "@/assets/galeria/000000003960.png.asset.json";
-import img8 from "@/assets/galeria/000000005f78.png.asset.json";
-import img9 from "@/assets/galeria/00000000877c.png.asset.json";
+
+const img1 = { url: "/assets/galeria/0000000045f8.png" };
+const img2 = { url: "/assets/galeria/0000000067cc.png" };
+const img3 = { url: "/assets/galeria/00000000db60.png" };
+const img4 = { url: "/assets/galeria/0000000041c8.png" };
+const img5 = { url: "/assets/galeria/00000000dff0.png" };
+const img6 = { url: "/assets/galeria/0000000098e4.png" };
+const img7 = { url: "/assets/galeria/000000003960.png" };
+const img8 = { url: "/assets/galeria/000000005f78.png" };
+const img9 = { url: "/assets/galeria/00000000877c.png" };
 
 type Cat = "identidade" | "social" | "impressos" | "ui" | "apresentacoes";
 
