@@ -1,6 +1,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Asterisk, Instagram, Mail, MapPin, MessageCircle } from "lucide-react";
-import heroPortrait from "@/assets/calvino-hero.png.asset.json";
+
+const heroPortrait = "/assets/calvino-hero.png";
 
 function scrollTo(href: string) {
   document.querySelector(href)?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -57,7 +58,7 @@ export function Hero() {
 
           <motion.div {...rise(0.78)} className="mt-8 flex flex-wrap gap-3">
             <button
-              onClick={() => scrollTo("#projetos")}
+              onClick={() => scrollTo("#galeria")}
               className="group inline-flex items-center gap-3 rounded-full border border-accent bg-accent/10 px-6 py-3.5 font-body text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-cream transition-all hover:bg-accent hover:scale-[1.02]"
             >
               Ver projetos <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -119,7 +120,7 @@ export function Hero() {
 
           <div className="relative overflow-hidden rounded-[28px]">
             <img
-              src={heroPortrait.url}
+              src={heroPortrait}
               alt="Calvino Cossa"
               width={1024}
               height={1280}

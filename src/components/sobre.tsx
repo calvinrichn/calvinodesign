@@ -1,6 +1,7 @@
 import { Reveal } from "./reveal";
 import { ArrowRight, Asterisk, Download, Heart, Lightbulb, Star, Target } from "lucide-react";
-import aboutPortrait from "@/assets/calvino.png.asset.json";
+
+const aboutPortrait = "/assets/calvino.png";
 
 const items = [
   { icon: Target, title: "Foco", desc: "Design estratégico com propósito e criatividade." },
@@ -37,7 +38,10 @@ export function Sobre() {
               </Reveal>
               <Reveal delay={0.22}>
                 <a
-                  href="#"
+                  href="/assets/cv-calvino-cossa.pdf"
+                  download="Calvino-Cossa-CV.pdf"
+                  target="_blank"
+                  rel="noopener"
                   className="mt-8 inline-flex items-center gap-4 rounded-2xl border border-cream/15 bg-bg/40 px-5 py-4 transition-colors hover:border-accent hover:bg-accent/5"
                 >
                   <span className="grid h-11 w-11 place-items-center rounded-xl border border-cream/15 text-cream">
@@ -93,7 +97,7 @@ export function Sobre() {
                     filter: "blur(24px)",
                   }}
                 />
-                <img src={aboutPortrait.url} alt="Calvino Cossa" loading="lazy" width={912} height={1104} className="h-full w-full object-cover" />
+                <img src={aboutPortrait} alt="Calvino Cossa" loading="lazy" width={912} height={1104} className="h-full w-full object-cover" />
                 <span className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-xl bg-accent text-cream">
                   <Asterisk className="h-4 w-4" strokeWidth={2.5} />
                 </span>
