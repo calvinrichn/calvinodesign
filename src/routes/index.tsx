@@ -4,7 +4,6 @@ import { Hero } from "@/components/hero";
 import { Stats } from "@/components/stats";
 import { Sobre } from "@/components/sobre";
 import { Servicos } from "@/components/servicos";
-import { Projetos } from "@/components/portfolio";
 import { Galeria } from "@/components/galeria";
 import { Competencias } from "@/components/competencias";
 import { Contacto } from "@/components/contacto";
@@ -22,7 +21,6 @@ function Index() {
         <Hero />
         <Sobre />
         <Servicos />
-        <Projetos />
         <Galeria />
         <Stats />
         <Competencias />
