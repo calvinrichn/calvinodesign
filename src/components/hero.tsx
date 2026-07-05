@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Asterisk, Instagram, Mail, MapPin, MessageCircle } from "lucide-react";
-import heroPortrait from "@/assets/calvino.png.asset.json";
+import heroPortrait from "@/assets/calvino-hero.png.asset.json";
 
 function scrollTo(href: string) {
   document.querySelector(href)?.scrollIntoView({ behavior: "smooth", block: "start" });
