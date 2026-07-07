@@ -62,7 +62,7 @@ export function Servicos() {
             </Reveal>
           </div>
           <Reveal delay={0.1}>
-            <a href="#projetos" onClick={(e) => { e.preventDefault(); document.querySelector("#projetos")?.scrollIntoView({ behavior: "smooth" }); }} className="group inline-flex items-center gap-3 font-body text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-cream">
+            <a href="#galeria" onClick={(e) => { e.preventDefault(); document.querySelector("#galeria")?.scrollIntoView({ behavior: "smooth" }); }} className="group inline-flex items-center gap-3 font-body text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-cream">
               Ver todos
               <span className="grid h-10 w-10 place-items-center rounded-full border border-cream/25 transition-all group-hover:border-accent group-hover:bg-accent">
                 <ArrowRight className="h-4 w-4" />

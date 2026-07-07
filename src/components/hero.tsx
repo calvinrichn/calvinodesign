@@ -82,6 +82,8 @@ export function Hero() {
                 <a
                   key={label}
                   href={href}
+                  target={href.startsWith("http") ? "_blank" : undefined}
+                  rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
                   aria-label={label}
                   className="grid h-10 w-10 place-items-center rounded-full border border-cream/15 text-cream/80 transition-all hover:border-accent hover:bg-accent/10 hover:text-accent"
                 >
